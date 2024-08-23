@@ -30,10 +30,14 @@ public class PageActions {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	public void clickElement(WebElement element) {
+	public String  clickElement(WebElement element) {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.click();
+		return element.getText();
+		
+		
+		
 
 	}
 
@@ -118,6 +122,23 @@ public class PageActions {
 		 return screeshot.getScreenshotAs(OutputType.BASE64);
 	
 	}
+	
+
+	public  void getValidateNavigationMenybyColor(WebElement element , WebElement elementdisplayed)
+{
+	String isClicked = clickElement(element); 
+	boolean isDisplayed  = isElementDisplayed(elementdisplayed);
+	//Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
+		 if (isDisplayed  = true) {
+	            System.out.println("I am on  " + isClicked);
+	        } else {
+	            System.out.println("Not on Same as clicked Page");
+	        
+	       }
+		 
+	}
+
+	
 	
 
 }

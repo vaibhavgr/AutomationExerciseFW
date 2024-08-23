@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.automationFW.Utils.PageActions;
 
@@ -19,9 +20,19 @@ public class BasePage extends PageActions {
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-	
-	
+	/*
+	 * @FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']") private
+	 * WebElement signupLoginNavigationBarIcon;
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * public void navigateToSignupPage() {
+	 * clickElement(signupLoginNavigationBarIcon); }
+	 */
 	
 	
 	

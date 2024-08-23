@@ -16,6 +16,8 @@ import org.testng.annotations.Parameters;
 
 import com.automationFW.Context.DriverManager;
 import com.automationFW.Utils.TestProperties;
+import com.automationFW.pageobjects.BasePage;
+import com.automationFW.pageobjects.HomePage;
 
 
 
@@ -70,9 +72,13 @@ public class BaseTest {
 	/**
 	 * Initializing pages
 	 */
-
+	public HomePage HomePageObj;
+	public BasePage BasePageobj;
 	
 	public void initPages() {
+		
+		HomePageObj = new HomePage(driver);
+		BasePageobj = new BasePage(driver);
 		
 	}
 
