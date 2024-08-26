@@ -3,11 +3,13 @@ package com.automationFW.Utils;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class UniqueGenerator {
 
 	
 	public static String getUniqueEmail() {
-		return "demouser"+ getCurrentDateTime() +"@yopmail.com";
+		return "automation"+ getCurrentDateTime() +"@yopmail.com";
 	}
 	
 	
@@ -17,5 +19,8 @@ public class UniqueGenerator {
 		 return dateTime.replaceAll("[^0-9]","");
 	}
 	
-
+	public static String randomeString(int length)
+	{
+		return RandomStringUtils.randomAlphanumeric(length);
+	}
 }

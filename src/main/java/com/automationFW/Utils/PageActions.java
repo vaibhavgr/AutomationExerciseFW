@@ -30,21 +30,27 @@ public class PageActions {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	public String  clickElement(WebElement element) {
+	public String clickElementAndGetText(WebElement element) {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.click();
 		return element.getText();
-		
-		
-		
 
 	}
+	
+	public Object clickElement(WebElement element)
+	{
+		waitUntilDisplayed(element);
+		waitUntilClickable(element);
+		element.click();
+		return null;
+	}
 
-	public void setTextBox(WebElement element, String value) {
+	public Object setTextBox(WebElement element, String value) {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.sendKeys(value);
+		return null;
 	}
 	
 	public String getElementText(WebElement element) {
@@ -126,7 +132,7 @@ public class PageActions {
 
 	public  void getValidateNavigationMenybyColor(WebElement element , WebElement elementdisplayed)
 {
-	String isClicked = clickElement(element); 
+	String isClicked = clickElementAndGetText(element); 
 	boolean isDisplayed  = isElementDisplayed(elementdisplayed);
 	//Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
 		 if (isDisplayed  = true) {
@@ -137,6 +143,20 @@ public class PageActions {
 	       }
 		 
 	}
+	
+	public  void getValidateText(WebElement element , WebElement elementdisplayed)
+	{
+		String isClicked = clickElementAndGetText(element); 
+		boolean isDisplayed  = isElementDisplayed(elementdisplayed);
+		//Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
+			 if (isDisplayed  = true) {
+		            System.out.println("I am on  " + isClicked);
+		        } else {
+		            System.out.println("Not on Same as clicked Page");
+		        
+		       }
+			 
+		}
 
 	
 	

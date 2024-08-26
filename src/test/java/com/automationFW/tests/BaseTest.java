@@ -18,6 +18,7 @@ import com.automationFW.Context.DriverManager;
 import com.automationFW.Utils.TestProperties;
 import com.automationFW.pageobjects.BasePage;
 import com.automationFW.pageobjects.HomePage;
+import com.automationFW.pageobjects.SignupLoginPage;
 
 
 
@@ -74,18 +75,19 @@ public class BaseTest {
 	 */
 	public HomePage HomePageObj;
 	public BasePage BasePageobj;
+	public SignupLoginPage SignupLoginPageObj;
 	
 	public void initPages() {
 		
 		HomePageObj = new HomePage(driver);
 		BasePageobj = new BasePage(driver);
-		
+		SignupLoginPageObj = new SignupLoginPage(driver);
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
-	}
+//	@AfterMethod
+//	public void tearDown() {
+//		driver.quit();
+//	}
 	
 
 }

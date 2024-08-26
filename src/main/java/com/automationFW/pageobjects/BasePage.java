@@ -23,15 +23,8 @@ public class BasePage extends PageActions {
 	/*
 	 * @FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']") private
 	 * WebElement signupLoginNavigationBarIcon;
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * public void navigateToSignupPage() {
-	 * clickElement(signupLoginNavigationBarIcon); }
+	
+	 *
 	 */
 	
 	

@@ -11,4 +11,9 @@ public class CommonAssertions {
 	{
 		Assert.assertEquals(actual, expected , failedMsg);
 	}
+	
+	public static void verifyTrue(boolean flag, String failedMSG) {
+		
+		Assert.assertTrue(flag, failedMSG);
+	}
 }

@@ -6,7 +6,6 @@
       <class name="com.automationFW.tests.RegisterUser">
         <methods>
           <include name="verifyUserIsAbletoRegisterWithValidCreds"/>
-          <include name="tearDown"/>
           <include name="initializeDriver"/>
         </methods>
       </class> <!-- com.automationFW.tests.RegisterUser -->

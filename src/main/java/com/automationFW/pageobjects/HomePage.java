@@ -26,6 +26,8 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']")
 	private WebElement signupLoginNavigationBarIcon;
+	
+	@FindBy(xpath = "//h2[text() = 'New User Signup!']")private WebElement newUserSignupText;
 
 	
 
@@ -41,6 +43,12 @@ public class HomePage extends BasePage {
 	{
 		return driver.getTitle();
 	}
+	
+	 public String navigateToSignupPage() {
+		  clickElement(signupLoginNavigationBarIcon); 
+		  return  newUserSignupText.getText();
+		  }
+	
 	
 	
 }
