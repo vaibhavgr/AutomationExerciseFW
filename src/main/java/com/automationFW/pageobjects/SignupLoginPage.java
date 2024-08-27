@@ -1,5 +1,6 @@
 package com.automationFW.pageobjects;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 import org.openqa.selenium.WebDriver;
@@ -35,22 +36,36 @@ public class SignupLoginPage extends BasePage {
 	@FindBy(css = "#company")private WebElement companyTextBox;
 	@FindBy(css = "#address1")private WebElement address1TextBox;
 	@FindBy(css = "#address2")private WebElement address2TextBox;
-	@FindBy(xpath = "//*[@id = 'country']//option[1")private WebElement countryTextBox;
+	@FindBy(xpath = "//*[@id = 'country']//option[1]")private WebElement countryTextBox;
 	@FindBy(css = "#state")private WebElement stateTextBox;
 	@FindBy(css = "#city")private WebElement cityTextBox;
 	@FindBy(css = "#zipcode")private WebElement zipcodeTextBox;
 	@FindBy(css = "#mobile_number")private WebElement mobileNumberTextBox;
 	@FindBy(xpath = "//button[@data-qa = 'create-account']")private WebElement createAccountBtn;
+	@FindBy(xpath = "//b[text() = 'Account Created!']")private WebElement accountCreatedText;
+	@FindBy(xpath = "//a[text() = ' Logged in as ']//b")private WebElement postLoginName;
+	@FindBy(xpath = "//a[text() = 'Continue']")private WebElement continueBtn;
 	
-	public boolean validateSignup() {
-
-		setTextBox(signupName, UniqueGenerator.randomeString(8));
+	
+//	public boolean validateSignup() {
+//
+//		setTextBox(signupName, UniqueGenerator.randomeString(8));
+//		setTextBox(signupEmail, UniqueGenerator.getUniqueEmail());
+//		clickElement(signUpBtn);
+//		return isElementDisplayed(accountInformationText);
+//	}
+	
+	public HashMap <String,Object>validateSignup(){
+		HashMap <String,Object>validateSignupMap = new HashMap<>();
+		setTextBox(signupName, UniqueGenerator.randomeString(5));
 		setTextBox(signupEmail, UniqueGenerator.getUniqueEmail());
 		clickElement(signUpBtn);
-		return isElementDisplayed(accountInformationText);
+		validateSignupMap.put("accontInformationText",isElementDisplayed(accountInformationText));
+		System.out.println(String.format("Inner",signupName));
+		return  validateSignupMap;
 	}
 	
-	public void validateAndCreateAccountInfo() {
+	public LinkedHashMap<Object, Object> validateAndCreateAccountInfo() {
 		LinkedHashMap<Object, Object> accountCreationamap = new LinkedHashMap<>();
 		Faker faker = new Faker();
 		accountCreationamap.put(clickElement(radioBtnMale),null);
@@ -63,12 +78,25 @@ public class SignupLoginPage extends BasePage {
 		accountCreationamap.put(clickElement(firstNameTextBox),setTextBox(firstNameTextBox,faker.name().firstName()));
 		accountCreationamap.put(clickElement(lastNameTextBox),setTextBox(lastNameTextBox,faker.name().lastName()));
 		accountCreationamap.put(clickElement(companyTextBox),setTextBox(companyTextBox,faker.name().firstName()));
-		accountCreationamap.put(clickElement(address1TextBox),setTextBox(address2TextBox,faker.address().fullAddress()));
+		accountCreationamap.put(clickElement(address1TextBox),setTextBox(address1TextBox,faker.address().fullAddress()));
 		accountCreationamap.put(clickElement(address2TextBox),setTextBox(address2TextBox,faker.address().fullAddress()));
 		accountCreationamap.put(clickElement(countryTextBox),null);
-	
+		accountCreationamap.put(clickElement(stateTextBox),setTextBox(stateTextBox,faker.address().state()));
+		accountCreationamap.put(clickElement(cityTextBox),setTextBox(cityTextBox,faker.address().cityName()));
+		accountCreationamap.put(clickElement(zipcodeTextBox),setTextBox(zipcodeTextBox,faker.address().zipCode()));
+		accountCreationamap.put(clickElement(mobileNumberTextBox),setTextBox(mobileNumberTextBox,faker.phoneNumber().phoneNumber()));
+		accountCreationamap.put(clickElement(createAccountBtn),null);
+		accountCreationamap.put("accountCreationMsg" ,getElementText(accountCreatedText));
+		accountCreationamap.put(clickElement(continueBtn),null);
+		accountCreationamap.put("postLoginNameText" ,getElementText(postLoginName));
 		
+		return accountCreationamap;
 
+		
+	}
+	
+	public void deleteAccount()
+	{
 		
 	}
 	

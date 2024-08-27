@@ -50,7 +50,8 @@ public class PageActions {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.sendKeys(value);
-		return null;
+		return this;
+		
 	}
 	
 	public String getElementText(WebElement element) {

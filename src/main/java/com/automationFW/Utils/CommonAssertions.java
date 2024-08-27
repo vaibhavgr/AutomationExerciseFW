@@ -7,9 +7,9 @@ import org.testng.Assert;
 
 public class CommonAssertions {
 
-	public static void verifyEqual(String actual , String expected, String failedMsg) 
+	public static void verifyEqual(Object object , String expected, String failedMsg) 
 	{
-		Assert.assertEquals(actual, expected , failedMsg);
+		Assert.assertEquals(object, expected , failedMsg);
 	}
 	
 	public static void verifyTrue(boolean flag, String failedMSG) {

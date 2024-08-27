@@ -20,14 +20,6 @@ public class BasePage extends PageActions {
 		PageFactory.initElements(driver, this);
 	}
 	
-	/*
-	 * @FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']") private
-	 * WebElement signupLoginNavigationBarIcon;
-	
-	 *
-	 */
-	
-	
 	
 	
 	
