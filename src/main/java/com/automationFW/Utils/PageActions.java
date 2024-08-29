@@ -44,14 +44,16 @@ public class PageActions {
 		waitUntilClickable(element);
 		element.click();
 		return null;
+		
 	}
 
-	public Object setTextBox(WebElement element, String value) {
+	public String setTextBox(WebElement element, String value) {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.sendKeys(value);
-		return this;
+		return value ;
 		
+
 	}
 	
 	public String getElementText(WebElement element) {

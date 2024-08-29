@@ -57,19 +57,21 @@ public class SignupLoginPage extends BasePage {
 	
 	public HashMap <String,Object>validateSignup(){
 		HashMap <String,Object>validateSignupMap = new HashMap<>();
-		setTextBox(signupName, UniqueGenerator.randomeString(5));
+		validateSignupMap.put("signupName",setTextBox(signupName, UniqueGenerator.randomeString(5)));
 		setTextBox(signupEmail, UniqueGenerator.getUniqueEmail());
 		clickElement(signUpBtn);
 		validateSignupMap.put("accontInformationText",isElementDisplayed(accountInformationText));
-		System.out.println(String.format("Inner",signupName));
-		return  validateSignupMap;
+		System.out.println("Inner" + signupName.toString());	
+		System.out.println(validateSignupMap);
+		
+		return  validateSignupMap; 
 	}
 	
 	public LinkedHashMap<Object, Object> validateAndCreateAccountInfo() {
 		LinkedHashMap<Object, Object> accountCreationamap = new LinkedHashMap<>();
 		Faker faker = new Faker();
 		accountCreationamap.put(clickElement(radioBtnMale),null);
-		accountCreationamap.put(clickElement(passwordTextBox), setTextBox(passwordTextBox , faker.internet().password()));
+		accountCreationamap.put("set", setTextBox(passwordTextBox , faker.internet().password()));
 		accountCreationamap.put(clickElement(dayDropdown),null);
 		accountCreationamap.put(clickElement(monthDropdown),null);
 		accountCreationamap.put(clickElement(yearDropdown),null);
