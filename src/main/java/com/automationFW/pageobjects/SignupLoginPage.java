@@ -45,6 +45,10 @@ public class SignupLoginPage extends BasePage {
 	@FindBy(xpath = "//b[text() = 'Account Created!']")private WebElement accountCreatedText;
 	@FindBy(xpath = "//a[text() = ' Logged in as ']//b")private WebElement postLoginName;
 	@FindBy(xpath = "//a[text() = 'Continue']")private WebElement continueBtn;
+	@FindBy(xpath = "//*[contains(text(),' Delete Account')]")private WebElement deleteAccountNavigationBarIcon;
+	@FindBy(xpath = "//b[text() = 'Account Deleted!']")private WebElement accountDeletedText;
+	@FindBy(css = "#email")private WebElement emailText;
+
 	
 	
 //	public boolean validateSignup() {
@@ -68,7 +72,8 @@ public class SignupLoginPage extends BasePage {
 		LinkedHashMap<Object, Object> accountCreationamap = new LinkedHashMap<>();
 		Faker faker = new Faker();
 		accountCreationamap.put(clickElement(radioBtnMale),null);
-		accountCreationamap.put("set", setTextBox(passwordTextBox , faker.internet().password()));
+		accountCreationamap.put("getEmailIdText" ,getElementText(emailText));
+		accountCreationamap.put("InputPassword", setTextBox(passwordTextBox , faker.internet().password()));
 		accountCreationamap.put(clickElement(dayDropdown),null);
 		accountCreationamap.put(clickElement(monthDropdown),null);
 		accountCreationamap.put(clickElement(yearDropdown),null);
@@ -89,14 +94,19 @@ public class SignupLoginPage extends BasePage {
 		clickElement(continueBtn);
 		accountCreationamap.put("postLoginNameText" ,getElementText(postLoginName));
 		
-		return accountCreationamap;
-
-		
+		return accountCreationamap;		
 	}
 	
 	
 	
-	
+	public String deleteAccount() {
+		clickElement(deleteAccountNavigationBarIcon);
+		String deleteAccountText = accountDeletedText.getText();
+		clickElement(continueBtn);
+		return deleteAccountText;
+		
+
+	}
 
 }
 

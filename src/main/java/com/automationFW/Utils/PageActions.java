@@ -35,13 +35,10 @@ public class PageActions {
 		return element.getText();
 
 	}
-	
-	public Object clickElement(WebElement element)
-	{
-		waitUntilDisplayed(element);
-		waitUntilClickable(element);
+
+	public Object clickElement(WebElement element) {
 		element.click();
-		return element;
+		return null;
 		
 	}
 
@@ -49,11 +46,9 @@ public class PageActions {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.sendKeys(value);
-		return value ;
-		
-
+		return value;
 	}
-	
+
 	public String getElementText(WebElement element) {
 		waitUntilDisplayed(element);
 		return element.getText();
@@ -75,7 +70,7 @@ public class PageActions {
 
 	public void dismissAlert() {
 		driver.switchTo().alert().dismiss();
-		
+
 	}
 
 	public void switchChildWindow() {
@@ -93,6 +88,7 @@ public class PageActions {
 			e.printStackTrace();
 		}
 	}
+
 	public void switchToParentWindow() {
 
 	}
@@ -104,17 +100,16 @@ public class PageActions {
 		}
 		return actualList;
 	}
-	
+
 	public boolean isElementDisplayed(WebElement element) {
 		try {
 			return element.isDisplayed();
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			return false;
 		}
-		
+
 	}
-	
+
 //	public static  String getScreenshot() throws IOException {
 //		TakesScreenshot screeshot = (TakesScreenshot) DriverManager.getDriver();
 //		File src = screeshot.getScreenshotAs(OutputType.FILE);
@@ -123,44 +118,37 @@ public class PageActions {
 //		FileUtils.moveFile(src, dest);
 //		return path;
 //	}
-	
-	public static  String getScreenshot() throws IOException {
-		TakesScreenshot screeshot = (TakesScreenshot) DriverManager.getDriver();
-		 return screeshot.getScreenshotAs(OutputType.BASE64);
-	
-	}
-	
 
-	public  void getValidateNavigationMenybyColor(WebElement element , WebElement elementdisplayed)
-{
-	String isClicked = clickElementAndGetText(element); 
-	boolean isDisplayed  = isElementDisplayed(elementdisplayed);
-	//Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
-		 if (isDisplayed  = true) {
-	            System.out.println("I am on  " + isClicked);
-	        } else {
-	            System.out.println("Not on Same as clicked Page");
-	        
-	       }
-		 
+	public static String getScreenshot() throws IOException {
+		TakesScreenshot screeshot = (TakesScreenshot) DriverManager.getDriver();
+		return screeshot.getScreenshotAs(OutputType.BASE64);
+
 	}
-	
-	public  void getValidateText(WebElement element , WebElement elementdisplayed)
-	{
-		String isClicked = clickElementAndGetText(element); 
-		boolean isDisplayed  = isElementDisplayed(elementdisplayed);
-		//Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
-			 if (isDisplayed  = true) {
-		            System.out.println("I am on  " + isClicked);
-		        } else {
-		            System.out.println("Not on Same as clicked Page");
-		        
-		       }
-			 
+
+	public void getValidateNavigationMenybyColor(WebElement element, WebElement elementdisplayed) {
+		String isClicked = clickElementAndGetText(element);
+		boolean isDisplayed = isElementDisplayed(elementdisplayed);
+		// Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
+		if (isDisplayed = true) {
+			System.out.println("I am on  " + isClicked);
+		} else {
+			System.out.println("Not on Same as clicked Page");
+
 		}
 
-	
-	
+	}
+
+	public void getValidateText(WebElement element, WebElement elementdisplayed) {
+		String isClicked = clickElementAndGetText(element);
+		boolean isDisplayed = isElementDisplayed(elementdisplayed);
+		// Assert.assertTrue(isDisplayed, "The expected element is not displayed.");
+		if (isDisplayed = true) {
+			System.out.println("I am on  " + isClicked);
+		} else {
+			System.out.println("Not on Same as clicked Page");
+
+		}
+
+	}
 
 }
-

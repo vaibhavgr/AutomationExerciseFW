@@ -29,26 +29,31 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath = "//h2[text() = 'New User Signup!']")private WebElement newUserSignupText;
 
+	@FindBy(xpath = "//h2[text() = 'Login to your account']")private WebElement loginText;
 	
 
-	
 	public void verifyUserIsOnhomePage() {
-		getValidateNavigationMenybyColor(homeNavigationBarIcon, headerOrangeColorCheck);
-		
-		
+		getValidateNavigationMenybyColor(homeNavigationBarIcon, headerOrangeColorCheck);		
 	}
 		
 	
-	public String validateHomePagetitle()
-	{
+	public String validateHomePagetitle(){
 		return driver.getTitle();
 	}
 	
 	 public String navigateToSignupPage() {
 		  clickElement(signupLoginNavigationBarIcon); 
 		  return  newUserSignupText.getText();
-		  }
-	
+	}
+	 
+	 public String navigateToLoginPage()
+	 {
+		 clickElement(signupLoginNavigationBarIcon); 
+		 return  loginText.getText();
+		 
+	 } 
+	 
+	 
 	
 	
 }
