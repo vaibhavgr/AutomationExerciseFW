@@ -61,9 +61,6 @@ public class SignupLoginPage extends BasePage {
 		setTextBox(signupEmail, UniqueGenerator.getUniqueEmail());
 		clickElement(signUpBtn);
 		validateSignupMap.put("accontInformationText",isElementDisplayed(accountInformationText));
-		System.out.println("Inner" + signupName.toString());	
-		System.out.println(validateSignupMap);
-		
 		return  validateSignupMap; 
 	}
 	
@@ -87,9 +84,9 @@ public class SignupLoginPage extends BasePage {
 		accountCreationamap.put(clickElement(cityTextBox),setTextBox(cityTextBox,faker.address().cityName()));
 		accountCreationamap.put(clickElement(zipcodeTextBox),setTextBox(zipcodeTextBox,faker.address().zipCode()));
 		accountCreationamap.put(clickElement(mobileNumberTextBox),setTextBox(mobileNumberTextBox,faker.phoneNumber().phoneNumber()));
-		accountCreationamap.put(clickElement(createAccountBtn),null);
+		clickElement(createAccountBtn);
 		accountCreationamap.put("accountCreationMsg" ,getElementText(accountCreatedText));
-		accountCreationamap.put(clickElement(continueBtn),null);
+		clickElement(continueBtn);
 		accountCreationamap.put("postLoginNameText" ,getElementText(postLoginName));
 		
 		return accountCreationamap;
@@ -97,10 +94,7 @@ public class SignupLoginPage extends BasePage {
 		
 	}
 	
-	public void deleteAccount()
-	{
-		
-	}
+	
 	
 	
 

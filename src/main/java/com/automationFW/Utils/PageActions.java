@@ -31,8 +31,6 @@ public class PageActions {
 	}
 
 	public String clickElementAndGetText(WebElement element) {
-		waitUntilDisplayed(element);
-		waitUntilClickable(element);
 		element.click();
 		return element.getText();
 
@@ -43,7 +41,7 @@ public class PageActions {
 		waitUntilDisplayed(element);
 		waitUntilClickable(element);
 		element.click();
-		return null;
+		return element;
 		
 	}
 
