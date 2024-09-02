@@ -15,21 +15,14 @@ public class HomePage extends BasePage {
 		PageFactory.initElements(driver, this);
 		
 	}
-	@FindBy(xpath = "//a[@style='color: orange;']")
-	private WebElement headerOrangeColorCheck;
-	
-	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[3]")
-	private WebElement cartNavigationBarIcon;
-	
-	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[1]")
-	private WebElement homeNavigationBarIcon;
-	
-	@FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']")
-	private WebElement signupLoginNavigationBarIcon;
-	
+	@FindBy(xpath = "//a[@style='color: orange;']")private WebElement headerOrangeColorCheck;
+	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[3]")private WebElement cartNavigationBarIcon;
+	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[1]")private WebElement homeNavigationBarIcon;
+	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[4]")private WebElement logoutNavigationBarIcon ;
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']")private WebElement signupLoginNavigationBarIcon;
 	@FindBy(xpath = "//h2[text() = 'New User Signup!']")private WebElement newUserSignupText;
-
 	@FindBy(xpath = "//h2[text() = 'Login to your account']")private WebElement loginText;
+	
 	
 
 	public void verifyUserIsOnhomePage() {
@@ -53,7 +46,10 @@ public class HomePage extends BasePage {
 		 
 	 } 
 	 
-	 
+	 public void verifyUserIsAbleTologout()
+	 {
+		 clickElement(logoutNavigationBarIcon); 
+	 } 
 	
 	
 }

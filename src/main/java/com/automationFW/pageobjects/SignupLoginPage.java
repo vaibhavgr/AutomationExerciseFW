@@ -13,6 +13,7 @@ import com.github.javafaker.Faker;
 
 public class SignupLoginPage extends BasePage {
 
+	
 	public SignupLoginPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -20,6 +21,9 @@ public class SignupLoginPage extends BasePage {
 		
 	}
 	@FindBy(xpath = "//a[@style='color: orange;']")private WebElement headerOrangeColorCheck;
+	@FindBy(xpath = "//input[@data-qa='login-email' and @placeholder='Email Address']")private WebElement loginEmailInput ;
+	@FindBy(xpath = "//input[@data-qa='login-password' and @placeholder='Password']")private WebElement loginPasswordInput;
+	@FindBy(xpath = "//button[@data-qa='login-button']")private WebElement loginBtn;
 	@FindBy(xpath = "//input[@data-qa='signup-name' and @placeholder='Name']")private WebElement signupName;
 	@FindBy(xpath = "//input[@data-qa='signup-email' and @placeholder='Email Address']")private WebElement signupEmail;
 	@FindBy(xpath = "//button[@data-qa='signup-button']")private WebElement signUpBtn ;
@@ -47,7 +51,7 @@ public class SignupLoginPage extends BasePage {
 	@FindBy(xpath = "//a[text() = 'Continue']")private WebElement continueBtn;
 	@FindBy(xpath = "//*[contains(text(),' Delete Account')]")private WebElement deleteAccountNavigationBarIcon;
 	@FindBy(xpath = "//b[text() = 'Account Deleted!']")private WebElement accountDeletedText;
-	@FindBy(css = "#email")private WebElement emailText;
+	@FindBy(xpath = "//input[@id='email']/@value")private WebElement emailText;
 
 	
 	
@@ -62,7 +66,7 @@ public class SignupLoginPage extends BasePage {
 	public HashMap <String,Object>validateSignup(){
 		HashMap <String,Object>validateSignupMap = new HashMap<>();
 		validateSignupMap.put("signupName",setTextBox(signupName, UniqueGenerator.randomeString(5)));
-		setTextBox(signupEmail, UniqueGenerator.getUniqueEmail());
+		validateSignupMap.put("signupEmail",setTextBox(signupEmail, UniqueGenerator.getUniqueEmail()));
 		clickElement(signUpBtn);
 		validateSignupMap.put("accontInformationText",isElementDisplayed(accountInformationText));
 		return  validateSignupMap; 
@@ -72,7 +76,7 @@ public class SignupLoginPage extends BasePage {
 		LinkedHashMap<Object, Object> accountCreationamap = new LinkedHashMap<>();
 		Faker faker = new Faker();
 		accountCreationamap.put(clickElement(radioBtnMale),null);
-		accountCreationamap.put("getEmailIdText" ,getElementText(emailText));
+		//accountCreationamap.put("getEmailIdText" ,getElementText(emailText));
 		accountCreationamap.put("InputPassword", setTextBox(passwordTextBox , faker.internet().password()));
 		accountCreationamap.put(clickElement(dayDropdown),null);
 		accountCreationamap.put(clickElement(monthDropdown),null);
@@ -97,17 +101,21 @@ public class SignupLoginPage extends BasePage {
 		return accountCreationamap;		
 	}
 	
-	
-	
 	public String deleteAccount() {
 		clickElement(deleteAccountNavigationBarIcon);
 		String deleteAccountText = accountDeletedText.getText();
 		clickElement(continueBtn);
 		return deleteAccountText;
-		
-
 	}
-
+	
+	public void login(String EmailID , String PasswordID)
+	{
+		loginEmailInput.sendKeys(EmailID);
+		loginPasswordInput.sendKeys(PasswordID);
+		clickElement(loginBtn);
+	}
+	
+	
 }
 
  
