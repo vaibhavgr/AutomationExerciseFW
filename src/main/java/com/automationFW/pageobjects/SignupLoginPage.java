@@ -63,21 +63,21 @@ public class SignupLoginPage extends BasePage {
 //		return isElementDisplayed(accountInformationText);
 //	}
 	
-	public HashMap <String,Object>validateSignup(){
+		public HashMap <String,Object>validateSignup(String email ){
 		HashMap <String,Object>validateSignupMap = new HashMap<>();
 		validateSignupMap.put("signupName",setTextBox(signupName, UniqueGenerator.randomeString(5)));
-		validateSignupMap.put("signupEmail",setTextBox(signupEmail, UniqueGenerator.getUniqueEmail()));
+		validateSignupMap.put("signupEmail",setTextBox(signupEmail, email ));
 		clickElement(signUpBtn);
 		validateSignupMap.put("accontInformationText",isElementDisplayed(accountInformationText));
 		return  validateSignupMap; 
 	}
 	
-	public LinkedHashMap<Object, Object> validateAndCreateAccountInfo() {
+	public LinkedHashMap<Object, Object> validateAndCreateAccountInfo(String password) {
 		LinkedHashMap<Object, Object> accountCreationamap = new LinkedHashMap<>();
 		Faker faker = new Faker();
 		accountCreationamap.put(clickElement(radioBtnMale),null);
 		//accountCreationamap.put("getEmailIdText" ,getElementText(emailText));
-		accountCreationamap.put("InputPassword", setTextBox(passwordTextBox , faker.internet().password()));
+		accountCreationamap.put("InputPassword", setTextBox(passwordTextBox , password ));
 		accountCreationamap.put(clickElement(dayDropdown),null);
 		accountCreationamap.put(clickElement(monthDropdown),null);
 		accountCreationamap.put(clickElement(yearDropdown),null);
@@ -108,11 +108,14 @@ public class SignupLoginPage extends BasePage {
 		return deleteAccountText;
 	}
 	
-	public void login(String EmailID , String PasswordID)
+	public boolean login(String EmailID , String PasswordID)
 	{
 		loginEmailInput.sendKeys(EmailID);
 		loginPasswordInput.sendKeys(PasswordID);
 		clickElement(loginBtn);
+		
+		return isElementDisplayed(postLoginName);
+		
 	}
 	
 	

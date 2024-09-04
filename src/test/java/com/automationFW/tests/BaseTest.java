@@ -16,9 +16,11 @@ import org.testng.annotations.Parameters;
 
 import com.automationFW.Context.DriverManager;
 import com.automationFW.Utils.TestProperties;
+import com.automationFW.Utils.UniqueGenerator;
 import com.automationFW.pageobjects.BasePage;
 import com.automationFW.pageobjects.HomePage;
 import com.automationFW.pageobjects.SignupLoginPage;
+import com.github.javafaker.Faker;
 
 
 
@@ -26,6 +28,9 @@ public class BaseTest {
 
 	WebDriver driver =null;
 	Properties prop ;
+	static Faker faker = new Faker();
+	static String email = UniqueGenerator.getUniqueEmail();
+	static String password = faker.internet().password(); 
 	
 
 	@BeforeMethod
@@ -84,10 +89,10 @@ public class BaseTest {
 		SignupLoginPageObj = new SignupLoginPage(driver);
 	}
 
-//	@AfterMethod
-//	public void tearDown() {
-//		driver.quit();
-//	}
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
 	
 
 }

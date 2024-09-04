@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-03T00:42:12 IST" name="Default suite" finished-at="2024-09-03T00:42:39 IST" duration-ms="27100">
+  <suite started-at="2024-09-05T01:04:06 IST" name="Default suite" finished-at="2024-09-05T01:04:52 IST" duration-ms="46250">
     <groups>
     </groups>
-    <test started-at="2024-09-03T00:42:12 IST" name="Default test" finished-at="2024-09-03T00:42:39 IST" duration-ms="27100">
-      <class name="com.automationFW.tests.LoginUserWithCorrectEmailPassword">
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUserWithCorrectEmailPassword@52719fb6]" started-at="2024-09-03T00:42:12 IST" name="initializeDriver" finished-at="2024-09-03T00:42:19 IST" duration-ms="7006" status="PASS">
+    <test started-at="2024-09-05T01:04:06 IST" name="Default test" finished-at="2024-09-05T01:04:52 IST" duration-ms="46250">
+      <class name="com.automationFW.tests.LoginUser">
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUser@45385f75]" started-at="2024-09-05T01:04:06 IST" name="initializeDriver" finished-at="2024-09-05T01:04:12 IST" duration-ms="6638" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -16,11 +16,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbletoSignupAndLoginWithValidEmailPass()[pri:0, instance:com.automationFW.tests.LoginUserWithCorrectEmailPassword@52719fb6]" started-at="2024-09-03T00:42:19 IST" name="verifyUserIsAbletoSignupAndLoginWithValidEmailPass" finished-at="2024-09-03T00:42:39 IST" duration-ms="20004" status="PASS">
+        <test-method signature="verifyUserIsAbletoSignupAndLoginWithValidEmailPass()[pri:0, instance:com.automationFW.tests.LoginUser@45385f75]" started-at="2024-09-05T01:04:12 IST" name="verifyUserIsAbletoSignupAndLoginWithValidEmailPass" finished-at="2024-09-05T01:04:36 IST" duration-ms="23359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserIsAbletoSignupAndLoginWithValidEmailPass -->
-      </class> <!-- com.automationFW.tests.LoginUserWithCorrectEmailPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.LoginUser@45385f75]" started-at="2024-09-05T01:04:36 IST" name="tearDown" finished-at="2024-09-05T01:04:36 IST" duration-ms="747" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUser@45385f75]" started-at="2024-09-05T01:04:36 IST" name="initializeDriver" finished-at="2024-09-05T01:04:43 IST" duration-ms="6710" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount()[pri:1, instance:com.automationFW.tests.LoginUser@45385f75]" started-at="2024-09-05T01:04:43 IST" name="verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount" finished-at="2024-09-05T01:04:51 IST" depends-on-methods="verifyUserIsAbletoSignupAndLoginWithValidEmailPass()" duration-ms="7977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.LoginUser@45385f75]" started-at="2024-09-05T01:04:51 IST" name="tearDown" finished-at="2024-09-05T01:04:52 IST" duration-ms="698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automationFW.tests.LoginUser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
