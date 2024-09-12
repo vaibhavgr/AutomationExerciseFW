@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automationFW.Utils.UniqueGenerator;
+import com.automationFW.models.LoginData;
 import com.github.javafaker.Faker;
 
 public class SignupLoginPage extends BasePage {
@@ -52,6 +53,11 @@ public class SignupLoginPage extends BasePage {
 	@FindBy(xpath = "//*[contains(text(),' Delete Account')]")private WebElement deleteAccountNavigationBarIcon;
 	@FindBy(xpath = "//b[text() = 'Account Deleted!']")private WebElement accountDeletedText;
 	@FindBy(xpath = "//input[@id='email']/@value")private WebElement emailText;
+	@FindBy(xpath = "//p[text() = 'Your email or password is incorrect!']")private WebElement incorrectLoginText;
+	@FindBy(xpath = "//p[text() = 'Email Address already exist!']")private WebElement emailAlreadyExistText;
+	
+	
+	
 
 	
 	
@@ -118,6 +124,22 @@ public class SignupLoginPage extends BasePage {
 		
 	}
 	
+	public String loginWithInValidCredAndValidation(LoginData Logindata)
+	{
+		setTextBox(loginEmailInput , Logindata.email);
+		setTextBox(loginPasswordInput , Logindata.password);
+		clickElement(loginBtn);
+	
+		return getElementText(incorrectLoginText);
+	}
+	
+	public String userAlreadyExist(String email , String password)
+	{
+		setTextBox(signupName, UniqueGenerator.randomeString(5));
+		setTextBox(signupEmail, email );
+		clickElement(signUpBtn);
+		return getElementText(emailAlreadyExistText);
+	}
 	
 }
 

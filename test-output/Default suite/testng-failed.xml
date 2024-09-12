@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="verifyUserIsAbletoSignupAndLoginWithValidEmailPass"/>
-          <include name="verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount"/>
+          <include name="verifyUserIsNotAbletoRegisterWithExistingEMail"/>
           <include name="initializeDriver"/>
         </methods>
       </class> <!-- com.automationFW.tests.LoginUser -->
