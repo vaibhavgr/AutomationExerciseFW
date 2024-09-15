@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CrossBrowserSuite" class="navigator-link">
-              <span class="suite-name border-failed">CrossBrowserSuite</span>
+              <span class="suite-name border-passed">CrossBrowserSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-CrossBrowserSuite" class="hide-methods failed suite-CrossBrowserSuite"> (hide)</a> <!-- hide-methods failed suite-CrossBrowserSuite -->
-                      <a href="#" panel-name="suite-CrossBrowserSuite" class="show-methods failed suite-CrossBrowserSuite"> (show)</a> <!-- show-methods failed suite-CrossBrowserSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-CrossBrowserSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CrossBrowserSuite" title="com.automationFW.tests.RegisterUser" class="method navigator-link" hash-for-method="verifyUserIsAbletoRegisterWithValidCreds">verifyUserIsAbletoRegisterWithValidCreds</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-CrossBrowserSuite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -115,6 +101,11 @@
                       <a href="#" panel-name="suite-CrossBrowserSuite" class="show-methods passed suite-CrossBrowserSuite"> (show)</a> <!-- show-methods passed suite-CrossBrowserSuite -->
                     </span>
                     <div class="method-list-content passed suite-CrossBrowserSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserSuite" title="com.automationFW.tests.RegisterUser" class="method navigator-link" hash-for-method="verifyUserIsAbletoRegisterWithValidCreds">verifyUserIsAbletoRegisterWithValidCreds</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CrossBrowserSuite" title="com.automationFW.tests.LoginUser" class="method navigator-link" hash-for-method="verifyUserIsAbletoSignupAndLoginWithValidEmailPass">verifyUserIsAbletoSignupAndLoginWithValidEmailPass</a> <!-- method navigator-link -->
@@ -147,9 +138,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CrossBrowserSuite" class="panel CrossBrowserSuite">
-          <div class="suite-CrossBrowserSuite-class-failed">
+          <div class="suite-CrossBrowserSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.automationFW.tests.RegisterUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -158,52 +149,10 @@
                   <a name="verifyUserIsAbletoRegisterWithValidCreds">
                   </a> <!-- verifyUserIsAbletoRegisterWithValidCreds -->
                   <span class="method-name">verifyUserIsAbletoRegisterWithValidCreds</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //b[text() = &apos;Account Created!&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.automationFW.Utils.PageActions.waitUntilDisplayed(PageActions.java:59)
-	at com.automationFW.Utils.PageActions.getElementText(PageActions.java:53)
-	at com.automationFW.pageobjects.SignupLoginPage.validateAndCreateAccountInfo(SignupLoginPage.java:103)
-	at com.automationFW.tests.RegisterUser.verifyUserIsAbletoRegisterWithValidCreds(RegisterUser.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//b[text() = &apos;Account Created!&apos;]&quot;}
-  (Session info: chrome=109.0.5414.168)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;17.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e8312321935d1bfed375017676c80356, findElement {using=xpath, value=//b[text() = &apos;Account Created!&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\HELLO\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61418/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e8312321935d1bfed375017676c80356
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 26 more
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CrossBrowserSuite-class-failed -->
+          </div> <!-- suite-CrossBrowserSuite-class-passed -->
           <div class="suite-CrossBrowserSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -249,17 +198,17 @@ Session ID: e8312321935d1bfed375017676c80356
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;tests&quot; name=&quot;CrossBrowserSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; name=&quot;CrossBrowserSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.automationFW.Listeners.ReportingListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;LoginUser&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;LoginUser&quot;&gt;
     &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.automationFW.tests.RegisterUser&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LoginUser --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;RegisterUser&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;RegisterUser&quot;&gt;
     &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.automationFW.tests.LoginUser&quot;/&gt;
@@ -307,25 +256,25 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbletoRegisterWithValidCreds')
-data.setCell(0, 2, 'com.automationFW.tests.RegisterUser')
-data.setCell(0, 3, 44188);
+data.setCell(0, 1, 'verifyUserIsAbletoSignupAndLoginWithValidEmailPass')
+data.setCell(0, 2, 'com.automationFW.tests.LoginUser')
+data.setCell(0, 3, 21625);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserIsAbletoSignupAndLoginWithValidEmailPass')
-data.setCell(1, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(1, 3, 27414);
+data.setCell(1, 1, 'verifyUserIsAbletoRegisterWithValidCreds')
+data.setCell(1, 2, 'com.automationFW.tests.RegisterUser')
+data.setCell(1, 3, 21154);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount')
 data.setCell(2, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(2, 3, 9864);
+data.setCell(2, 3, 11029);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass')
 data.setCell(3, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(3, 3, 9691);
+data.setCell(3, 3, 9908);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyUserIsNotAbletoRegisterWithExistingEMail')
 data.setCell(4, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(4, 3, 9334);
+data.setCell(4, 3, 8667);
 window.suiteTableData['CrossBrowserSuite']= { tableData: data, tableDiv: 'times-div-CrossBrowserSuite'}
 return data;
 }
@@ -361,78 +310,64 @@ return data;
                 <span class="method-name">initializeDriver(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserIsAbletoRegisterWithValidCreds</span>
+                <span class="method-start">8028 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">29199 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automationFW.tests.LoginUser</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">30721 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbletoSignupAndLoginWithValidEmailPass</span>
-                <span class="method-start">7485 ms</span>
+                <span class="method-start">37474 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.automationFW.tests.RegisterUser</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyUserIsAbletoRegisterWithValidCreds</span>
-                <span class="method-start">8666 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.automationFW.tests.LoginUser</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34911 ms</span>
+                <span class="method-start">59104 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">35597 ms</span>
+                <span class="method-start">59805 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</span>
-                <span class="method-start">40956 ms</span>
+                <span class="method-start">69536 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">50652 ms</span>
+                <span class="method-start">79448 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">51338 ms</span>
+                <span class="method-start">80249 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.automationFW.tests.RegisterUser</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">52874 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.automationFW.tests.LoginUser</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsNotAbletoRegisterWithExistingEMail</span>
-                <span class="method-start">57178 ms</span>
+                <span class="method-start">86808 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">66515 ms</span>
+                <span class="method-start">95477 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">67168 ms</span>
+                <span class="method-start">96149 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount</span>
-                <span class="method-start">72573 ms</span>
+                <span class="method-start">102780 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82443 ms</span>
+                <span class="method-start">113812 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

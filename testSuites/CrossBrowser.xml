@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="CrossBrowserSuite" parallel="tests" thread-count="5">
+<suite name="CrossBrowserSuite" thread-count="2">
 <listeners>
 		<listener class-name="com.automationFW.Listeners.ReportingListener"></listener>
 		
@@ -16,7 +16,7 @@
   <test name="RegisterUser">
   <parameter name="browserName" value="chrome"></parameter>
     <classes>
-    <class name="com.automationFW.tests.LoginUser"/>
+    <class na me="com.automationFW.tests.LoginUser"/>
       
     </classes>
   </test> 

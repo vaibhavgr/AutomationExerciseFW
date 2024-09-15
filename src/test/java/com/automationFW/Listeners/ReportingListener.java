@@ -12,25 +12,28 @@ import com.aventstack.extentreports.Status;
 public class ReportingListener implements ITestListener{
 
 	ExtentReports extent = ReporterNG.getReporter();
-	ExtentTest test;
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	
+	
 	@Override
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getMethod().getMethodName());
+		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+		extentTest.set(test);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-	 test.log(Status.PASS, "Your test is pass successfully");
+		extentTest.get().log(Status.PASS, "Your test is pass successfully");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test.log(Status.FAIL, result.getThrowable());
+		extentTest.get().log(Status.FAIL, result.getThrowable());
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		test.log(Status.SKIP, "Test Skipped");
+		extentTest.get().log(Status.SKIP, "Test Skipped");
 	}
 
 	@Override

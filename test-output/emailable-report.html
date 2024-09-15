@@ -9,54 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">CrossBrowserSuite</th></tr>
-<tr><td><a href="#t0">LoginUser</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">53,881</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">RegisterUser</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">83,254</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">137,135</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">LoginUser</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">30,052</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">RegisterUser</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">83,871</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">5</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">113,923</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowserSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginUser &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.automationFW.tests.RegisterUser</td><td><a href="#m0">verifyUserIsAbletoRegisterWithValidCreds</a></td><td rowspan="1">1726158270379</td><td rowspan="1">44188</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">RegisterUser &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.automationFW.tests.LoginUser</td><td><a href="#m1">verifyUserIsAbletoSignupAndLoginWithValidEmailPass</a></td><td rowspan="1">1726158269198</td><td rowspan="1">27414</td></tr><tr class="passedeven"><td><a href="#m2">verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount</a></td><td rowspan="1">1726158334286</td><td rowspan="1">9864</td></tr><tr class="passedeven"><td><a href="#m3">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</a></td><td rowspan="1">1726158302669</td><td rowspan="1">9691</td></tr><tr class="passedeven"><td><a href="#m4">verifyUserIsNotAbletoRegisterWithExistingEMail</a></td><td rowspan="1">1726158318891</td><td rowspan="1">9334</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowserSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginUser &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.automationFW.tests.RegisterUser</td><td><a href="#m0">verifyUserIsAbletoRegisterWithValidCreds</a></td><td rowspan="1">1726302164735</td><td rowspan="1">21154</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">RegisterUser &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.automationFW.tests.LoginUser</td><td><a href="#m1">verifyUserIsAbletoSignupAndLoginWithValidEmailPass</a></td><td rowspan="1">1726302194181</td><td rowspan="1">21625</td></tr><tr class="passedeven"><td><a href="#m2">verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount</a></td><td rowspan="1">1726302259487</td><td rowspan="1">11029</td></tr><tr class="passedeven"><td><a href="#m3">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</a></td><td rowspan="1">1726302226243</td><td rowspan="1">9908</td></tr><tr class="passedeven"><td><a href="#m4">verifyUserIsNotAbletoRegisterWithExistingEMail</a></td><td rowspan="1">1726302243515</td><td rowspan="1">8667</td></tr></tbody>
 </table>
-<h2>LoginUser</h2><h3 id="m0">com.automationFW.tests.RegisterUser#verifyUserIsAbletoRegisterWithValidCreds</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //b[text() = &apos;Account Created!&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.automationFW.Utils.PageActions.waitUntilDisplayed(PageActions.java:59)
-	at com.automationFW.Utils.PageActions.getElementText(PageActions.java:53)
-	at com.automationFW.pageobjects.SignupLoginPage.validateAndCreateAccountInfo(SignupLoginPage.java:103)
-	at com.automationFW.tests.RegisterUser.verifyUserIsAbletoRegisterWithValidCreds(RegisterUser.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//b[text() = &apos;Account Created!&apos;]&quot;}
-  (Session info: chrome=109.0.5414.168)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;17.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e8312321935d1bfed375017676c80356, findElement {using=xpath, value=//b[text() = &apos;Account Created!&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\HELLO\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61418/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e8312321935d1bfed375017676c80356
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 26 more
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>LoginUser</h2><h3 id="m0">com.automationFW.tests.RegisterUser#verifyUserIsAbletoRegisterWithValidCreds</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h2>RegisterUser</h2><h3 id="m1">com.automationFW.tests.LoginUser#verifyUserIsAbletoSignupAndLoginWithValidEmailPass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.automationFW.tests.LoginUser#verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">com.automationFW.tests.LoginUser#verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
