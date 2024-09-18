@@ -16,7 +16,7 @@
   <test name="RegisterUser">
   <parameter name="browserName" value="chrome"></parameter>
     <classes>
-    <class na me="com.automationFW.tests.LoginUser"/>
+    <class name="com.automationFW.tests.LoginUser"/>
       
     </classes>
   </test> 

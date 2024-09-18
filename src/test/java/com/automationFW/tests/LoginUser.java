@@ -1,7 +1,6 @@
 package com.automationFW.tests;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 
 import org.testng.annotations.Test;
@@ -41,8 +40,10 @@ public class LoginUser extends BaseTest {
 		List<LoginData> dataList = ExcelReader.incorrectLoginDatafromExcel();
 		dataList.forEach(InvalidData -> {
 			String expectedInvalidText = SignupLoginPageObj.loginWithInValidCredAndValidation(InvalidData);
-			CommonAssertions.verifyEqual(expectedInvalidText, "Your email or password is incorrect!", "");
+			CommonAssertions.verifyEqual(expectedInvalidText, "Your email or psassword is incorrect!", "");
 			System.out.println(email + password + "i am at thirdcase" );
+			
+			
 
 		});
 	}

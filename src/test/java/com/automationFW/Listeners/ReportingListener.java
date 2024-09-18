@@ -1,12 +1,16 @@
 package com.automationFW.Listeners;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.automationFW.Utils.PageActions;
 import com.automationFW.Utils.ReporterNG;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 public class ReportingListener implements ITestListener{
@@ -29,6 +33,14 @@ public class ReportingListener implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		extentTest.get().log(Status.FAIL, result.getThrowable());
+		try {
+			String path = PageActions.getScreenshot();
+			extentTest.get().log(Status.FAIL,MediaEntityBuilder.createScreenCaptureFromBase64String(path).build());
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}   
+		
 	}
 
 	@Override

@@ -30,7 +30,7 @@ public class PageActions {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	public String clickElementAndGetText(WebElement element) {
+	public String clickElementAndGetText(WebElement element) { 
 		element.click();
 		return element.getText();
 
@@ -110,11 +110,12 @@ public class PageActions {
 
 	}
 
-//	public static  String getScreenshot() throws IOException {
+
+//	public static String getScreenshot() throws IOException {
 //		TakesScreenshot screeshot = (TakesScreenshot) DriverManager.getDriver();
 //		File src = screeshot.getScreenshotAs(OutputType.FILE);
 //		String path= System.getProperty("user.dir") + "//Reports//screenshot"+UniqueGenerator.getCurrentDateTime()+".png";
-//		File dest = new File(path);
+//		File dest = new File(path); 
 //		FileUtils.moveFile(src, dest);
 //		return path;
 //	}
@@ -148,7 +149,10 @@ public class PageActions {
 			System.out.println("Not on Same as clicked Page");
 
 		}
+		
+		
 
 	}
+	
 
 }

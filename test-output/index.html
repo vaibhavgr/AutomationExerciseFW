@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CrossBrowserSuite" class="navigator-link">
-              <span class="suite-name border-passed">CrossBrowserSuite</span>
+              <span class="suite-name border-failed">CrossBrowserSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CrossBrowserSuite" class="hide-methods failed suite-CrossBrowserSuite"> (hide)</a> <!-- hide-methods failed suite-CrossBrowserSuite -->
+                      <a href="#" panel-name="suite-CrossBrowserSuite" class="show-methods failed suite-CrossBrowserSuite"> (show)</a> <!-- show-methods failed suite-CrossBrowserSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-CrossBrowserSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserSuite" title="com.automationFW.tests.LoginUser" class="method navigator-link" hash-for-method="verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CrossBrowserSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,11 +132,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CrossBrowserSuite" title="com.automationFW.tests.LoginUser" class="method navigator-link" hash-for-method="verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CrossBrowserSuite" title="com.automationFW.tests.LoginUser" class="method navigator-link" hash-for-method="verifyUserIsNotAbletoRegisterWithExistingEMail">verifyUserIsNotAbletoRegisterWithExistingEMail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -138,6 +147,29 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CrossBrowserSuite" class="panel CrossBrowserSuite">
+          <div class="suite-CrossBrowserSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.automationFW.tests.LoginUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass">
+                  </a> <!-- verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass -->
+                  <span class="method-name">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</span>
+                  <div class="stack-trace">java.lang.AssertionError:  expected [Your email or psassword is incorrect!] but found [Your email or password is incorrect!]
+	at com.automationFW.Utils.CommonAssertions.verifyEqual(CommonAssertions.java:10)
+	at com.automationFW.tests.LoginUser.lambda$0(LoginUser.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.automationFW.tests.LoginUser.verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass(LoginUser.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CrossBrowserSuite-class-failed -->
           <div class="suite-CrossBrowserSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -171,13 +203,6 @@
                   <a name="verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount">
                   </a> <!-- verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount -->
                   <span class="method-name">verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass">
-                  </a> <!-- verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass -->
-                  <span class="method-name">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -258,23 +283,23 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyUserIsAbletoSignupAndLoginWithValidEmailPass')
 data.setCell(0, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(0, 3, 21625);
+data.setCell(0, 3, 28466);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyUserIsAbletoRegisterWithValidCreds')
 data.setCell(1, 2, 'com.automationFW.tests.RegisterUser')
-data.setCell(1, 3, 21154);
+data.setCell(1, 3, 27525);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount')
+data.setCell(2, 1, 'verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass')
 data.setCell(2, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(2, 3, 11029);
+data.setCell(2, 3, 14402);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass')
+data.setCell(3, 1, 'verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount')
 data.setCell(3, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(3, 3, 9908);
+data.setCell(3, 3, 13940);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyUserIsNotAbletoRegisterWithExistingEMail')
 data.setCell(4, 2, 'com.automationFW.tests.LoginUser')
-data.setCell(4, 3, 8667);
+data.setCell(4, 3, 8390);
 window.suiteTableData['CrossBrowserSuite']= { tableData: data, tableDiv: 'times-div-CrossBrowserSuite'}
 return data;
 }
@@ -312,62 +337,64 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbletoRegisterWithValidCreds</span>
-                <span class="method-start">8028 ms</span>
+                <span class="method-start">8726 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29199 ms</span>
+                <span class="method-start">36267 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automationFW.tests.LoginUser</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">30721 ms</span>
+                <span class="method-start">37634 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbletoSignupAndLoginWithValidEmailPass</span>
-                <span class="method-start">37474 ms</span>
+                <span class="method-start">44186 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">59104 ms</span>
+                <span class="method-start">72655 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">59805 ms</span>
+                <span class="method-start">73343 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass</span>
-                <span class="method-start">69536 ms</span>
+                <span class="method-start">79537 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">79448 ms</span>
+                <span class="method-start">94214 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">80249 ms</span>
+                <span class="method-start">94915 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsNotAbletoRegisterWithExistingEMail</span>
-                <span class="method-start">86808 ms</span>
+                <span class="method-start">101439 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">95477 ms</span>
+                <span class="method-start">109832 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeDriver(chrome)</span>
-                <span class="method-start">96149 ms</span>
+                <span class="method-start">110508 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount</span>
-                <span class="method-start">102780 ms</span>
+                <span class="method-start">115462 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">113812 ms</span>
+                <span class="method-start">129406 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
