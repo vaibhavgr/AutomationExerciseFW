@@ -1,19 +1,14 @@
 package com.automationFW.tests;
 
-import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -22,6 +17,7 @@ import com.automationFW.Context.DriverManager;
 import com.automationFW.Utils.TestProperties;
 import com.automationFW.Utils.UniqueGenerator;
 import com.automationFW.pageobjects.BasePage;
+import com.automationFW.pageobjects.ContactUsPage;
 import com.automationFW.pageobjects.HomePage;
 import com.automationFW.pageobjects.SignupLoginPage;
 import com.github.javafaker.Faker;
@@ -85,18 +81,20 @@ public class BaseTest {
 	public HomePage HomePageObj;
 	public BasePage BasePageobj;
 	public SignupLoginPage SignupLoginPageObj;
+	public ContactUsPage ContactUsPageObj;
 	
 	public void initPages() {
 		
 		HomePageObj = new HomePage(driver);
 		BasePageobj = new BasePage(driver);
 		SignupLoginPageObj = new SignupLoginPage(driver);
+		ContactUsPageObj = new ContactUsPage(driver);
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
-	}
+//	@AfterMethod
+//	public void tearDown() {
+//		driver.quit();
+//	}
 	
 
 

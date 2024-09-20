@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationFW.tests.LoginUser">
+      <class name="com.automationFW.tests.ContactUs">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyUserIsAbletoSignupAndLoginWithValidEmailPass"/>
-          <include name="verifyUserIsNotAbletoRegisterWithExistingEMail"/>
+          <include name="verifyUserIsAbleToSendContactUsSuccessfully"/>
           <include name="initializeDriver"/>
         </methods>
-      </class> <!-- com.automationFW.tests.LoginUser -->
+      </class> <!-- com.automationFW.tests.ContactUs -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

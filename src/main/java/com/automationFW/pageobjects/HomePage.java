@@ -19,9 +19,13 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[3]")private WebElement cartNavigationBarIcon;
 	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[1]")private WebElement homeNavigationBarIcon;
 	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[4]")private WebElement logoutNavigationBarIcon ;
+	@FindBy(xpath = "//div[@class='shop-menu pull-right']//ul[@class='nav navbar-nav']/*[8]")private WebElement ContactUsBarIcon ;
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']/li/a[@href='/login']")private WebElement signupLoginNavigationBarIcon;
 	@FindBy(xpath = "//h2[text() = 'New User Signup!']")private WebElement newUserSignupText;
 	@FindBy(xpath = "//h2[text() = 'Login to your account']")private WebElement loginText;
+	@FindBy(xpath = "//h2[text() ='Get In Touch']")private WebElement GetinTouchText;
+	
+	
 	
 	
 
@@ -43,6 +47,13 @@ public class HomePage extends BasePage {
 	 {
 		 clickElement(signupLoginNavigationBarIcon); 
 		 return  loginText.getText();
+		 
+	 } 
+	 
+	 public String navigateToContactUsPage()
+	 {
+		 clickElement(ContactUsBarIcon); 
+		 return GetinTouchText.getText();
 		 
 	 } 
 	 

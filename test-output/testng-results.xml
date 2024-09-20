@@ -1,157 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-18T20:45:24 IST" name="CrossBrowserSuite" finished-at="2024-09-18T20:47:34 IST" duration-ms="130199">
+  <suite started-at="2024-09-20T14:05:41 IST" name="Default suite" finished-at="2024-09-20T14:05:51 IST" duration-ms="10090">
     <groups>
     </groups>
-    <test started-at="2024-09-18T20:45:24 IST" name="LoginUser" finished-at="2024-09-18T20:46:01 IST" duration-ms="37130">
-      <class name="com.automationFW.tests.RegisterUser">
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.RegisterUser@74a6a609]" started-at="2024-09-18T20:45:24 IST" name="initializeDriver" finished-at="2024-09-18T20:45:33 IST" duration-ms="8720" status="PASS">
+    <test started-at="2024-09-20T14:05:41 IST" name="Default test" finished-at="2024-09-20T14:05:51 IST" duration-ms="10090">
+      <class name="com.automationFW.tests.ContactUs">
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.ContactUs@1f9f6368]" started-at="2024-09-20T14:05:41 IST" name="initializeDriver" finished-at="2024-09-20T14:05:49 IST" duration-ms="8096" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
+              <value is-null="true"/>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbletoRegisterWithValidCreds()[pri:0, instance:com.automationFW.tests.RegisterUser@74a6a609]" started-at="2024-09-18T20:45:33 IST" name="verifyUserIsAbletoRegisterWithValidCreds" finished-at="2024-09-18T20:46:00 IST" duration-ms="27525" status="PASS">
+        <test-method signature="verifyUserIsAbleToSendContactUsSuccessfully()[pri:0, instance:com.automationFW.tests.ContactUs@1f9f6368]" started-at="2024-09-20T14:05:49 IST" name="verifyUserIsAbleToSendContactUsSuccessfully" finished-at="2024-09-20T14:05:51 IST" duration-ms="1911" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbletoRegisterWithValidCreds -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.RegisterUser@74a6a609]" started-at="2024-09-18T20:46:00 IST" name="tearDown" finished-at="2024-09-18T20:46:01 IST" duration-ms="726" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.automationFW.tests.RegisterUser -->
-    </test> <!-- LoginUser -->
-    <test started-at="2024-09-18T20:46:02 IST" name="RegisterUser" finished-at="2024-09-18T20:47:34 IST" duration-ms="92458">
-      <class name="com.automationFW.tests.LoginUser">
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:02 IST" name="initializeDriver" finished-at="2024-09-18T20:46:08 IST" duration-ms="6552" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbletoSignupAndLoginWithValidEmailPass()[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:08 IST" name="verifyUserIsAbletoSignupAndLoginWithValidEmailPass" finished-at="2024-09-18T20:46:37 IST" duration-ms="28466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbletoSignupAndLoginWithValidEmailPass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:37 IST" name="tearDown" finished-at="2024-09-18T20:46:37 IST" duration-ms="683" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:37 IST" name="initializeDriver" finished-at="2024-09-18T20:46:44 IST" duration-ms="6194" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass()[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:44 IST" name="verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass" finished-at="2024-09-18T20:46:58 IST" duration-ms="14402" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[ expected [Your email or psassword is incorrect!] but found [Your email or password is incorrect!]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError:  expected [Your email or psassword is incorrect!] but found [Your email or password is incorrect!]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at com.automationFW.Utils.CommonAssertions.verifyEqual(CommonAssertions.java:10)
-at com.automationFW.tests.LoginUser.lambda$0(LoginUser.java:43)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at com.automationFW.tests.LoginUser.verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass(LoginUser.java:41)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsNotAbletoLoginWithIncorrectEmailAndPass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:58 IST" name="tearDown" finished-at="2024-09-18T20:46:59 IST" duration-ms="692" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:46:59 IST" name="initializeDriver" finished-at="2024-09-18T20:47:05 IST" duration-ms="6523" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsNotAbletoRegisterWithExistingEMail()[pri:1, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:47:05 IST" name="verifyUserIsNotAbletoRegisterWithExistingEMail" finished-at="2024-09-18T20:47:14 IST" depends-on-methods="verifyUserIsAbletoSignupAndLoginWithValidEmailPass()" duration-ms="8390" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsNotAbletoRegisterWithExistingEMail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:47:14 IST" name="tearDown" finished-at="2024-09-18T20:47:14 IST" duration-ms="674" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:47:14 IST" name="initializeDriver" finished-at="2024-09-18T20:47:19 IST" duration-ms="4953" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount()[pri:2, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:47:19 IST" name="verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount" finished-at="2024-09-18T20:47:33 IST" depends-on-methods="verifyUserIsAbletoSignupAndLoginWithValidEmailPass()" duration-ms="13940" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbletoSignupAndLoginWithValidEmailPassAndDeleteAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationFW.tests.LoginUser@3f0846c6]" started-at="2024-09-18T20:47:33 IST" name="tearDown" finished-at="2024-09-18T20:47:34 IST" duration-ms="664" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.automationFW.tests.LoginUser -->
-    </test> <!-- RegisterUser -->
-  </suite> <!-- CrossBrowserSuite -->
+        </test-method> <!-- verifyUserIsAbleToSendContactUsSuccessfully -->
+      </class> <!-- com.automationFW.tests.ContactUs -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

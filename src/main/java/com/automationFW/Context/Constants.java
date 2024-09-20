@@ -8,6 +8,8 @@ public class Constants {
 	public static final String invalidLogindata= workingDirectory+"/src/test/resources/testData/signupUser";
 	public static final String reporterPath= workingDirectory+"/src/test/resources/extentConfig/extent-config.xml";
 	
+	public static final String contactUsJson= workingDirectory+"/src/test/resources/testData/contactus.json";
+	
 
 	
 }
